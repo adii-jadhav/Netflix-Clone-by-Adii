@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    color: white;
+  background-color: black;
+}
+.banner{
+   
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 25rem;
+    box-shadow: inset 0 0 40rem rgba(0, 0, 0);
+    
+}
+.banner-content{
+    transform: translateY(4.5rem);
+}
+.banner-content p{
+    font-weight: 500;
+}
+.banner-btns button{
+    width: 6rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    backdrop-filter: blur(3px);
+    color: white;
+    font-weight: 500;
+    background-color: rgba(51,51,51,0.5);
+}
+.banner-btns button:hover{
+    background-color: rgba(255, 248, 248, 0.678);
+    color: black;
+}
+
+.movie-row{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.movie-row::-webkit-scrollbar{
+    display: none;
+}
+
+.img-box{
+    height: 100px;
+ 
+    transition: transform 0.3s ease-in;
+}
+
+.img-box-lg{
+    height: 200px;
+ 
+    transition: transform 0.2s ease-in;
+}
+.img-box img ,.img-box-lg img{
+    object-fit: contain;
+    height: 100%;
+
+}
+
+.img-box:hover{
+    transform: scale(1.08);
+   
+}
+
+.img-box-lg :hover{
+    transform: scale(1.08);
+   
+}
+.title h2{
+    margin-left: 15px;
+}
+
+.nav{
+    height: 50px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    transition: all 0.5s ease-out;
+}
+.nav .logo{
+    height: 30px;
+}
+.nav .logo img{
+    object-fit: contain;
+    height: 100%;
+ 
+}
+
+.avatar{
+    height: 30px;
+}
+.avatar img{
+    height: 100%;
+
+}
+
+
+.loading-row{
+    display: flex;
+}
+.movie-loading-box{
+    margin: 5px;
+    height: 100px;
+    width: 200px;
+    position: relative;
+    background-color: rgb(175, 165, 165);
+}
+
+.movie-loading-box::after{
+    
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+ 
+    background: linear-gradient(90deg ,transparent ,rgba(255, 255, 255, 0.205) ,transparent);
+    animation: loading 1s ease-in-out 0s infinite  both;
+}
+
+@keyframes loading{
+
+  
+    100%{
+        transform: translateX(100%);
+
+    }
+}
